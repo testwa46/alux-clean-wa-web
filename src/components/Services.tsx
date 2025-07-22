@@ -1,6 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Building, Factory, ShoppingCart, Droplets, Leaf } from "lucide-react";
+import cleanOfficeImage from "@/assets/clean-office-space.jpg";
+import industrialCleaningImage from "@/assets/industrial-cleaning.jpg";
+import cleaningEquipmentImage from "@/assets/cleaning-equipment.jpg";
 
 const Services = () => {
   const services = [
@@ -41,6 +44,51 @@ const Services = () => {
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Comprehensive cleaning solutions tailored to your specific needs across Western Australia.
           </p>
+        </div>
+
+        {/* Service showcase images */}
+        <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="relative rounded-2xl overflow-hidden shadow-elegant group">
+            <img 
+              src={cleanOfficeImage} 
+              alt="Clean professional office space" 
+              className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end">
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-primary-foreground mb-2">Office Cleaning</h3>
+                <p className="text-primary-foreground/90 text-sm">Professional office environments</p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="relative rounded-2xl overflow-hidden shadow-elegant group">
+            <img 
+              src={industrialCleaningImage} 
+              alt="Industrial warehouse cleaning" 
+              className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end">
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-primary-foreground mb-2">Industrial Cleaning</h3>
+                <p className="text-primary-foreground/90 text-sm">Large-scale industrial facilities</p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="relative rounded-2xl overflow-hidden shadow-elegant group">
+            <img 
+              src={cleaningEquipmentImage} 
+              alt="Professional cleaning equipment" 
+              className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end">
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-primary-foreground mb-2">Professional Equipment</h3>
+                <p className="text-primary-foreground/90 text-sm">State-of-the-art cleaning tools</p>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">

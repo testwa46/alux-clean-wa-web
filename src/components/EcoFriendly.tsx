@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Leaf, Droplets, Recycle, Shield } from "lucide-react";
+import ecoProductsImage from "@/assets/eco-products.jpg";
 
 const EcoFriendly = () => {
   const ecoFeatures = [
@@ -39,6 +40,25 @@ const EcoFriendly = () => {
             We use biodegradable and certified-safe products to ensure safety for people and the planet. 
             Our cleaning equipment and chemicals are managed responsibly with full MSDS provided on-site.
           </p>
+        </div>
+
+        {/* Eco products showcase */}
+        <div className="mb-12 relative rounded-2xl overflow-hidden shadow-elegant">
+          <img 
+            src={ecoProductsImage} 
+            alt="Eco-friendly cleaning products" 
+            className="w-full h-80 object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-transparent flex items-center">
+            <div className="p-12">
+              <h3 className="text-3xl font-bold text-primary-foreground mb-4">
+                Certified Eco-Friendly Products
+              </h3>
+              <p className="text-primary-foreground/90 text-lg">
+                All our cleaning products are biodegradable and safe for people and the environment
+              </p>
+            </div>
+          </div>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">

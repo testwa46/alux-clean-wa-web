@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Star, Shield, Users } from "lucide-react";
+import heroImage from "@/assets/hero-cleaning-team.jpg";
 
 const Hero = () => {
   return (
@@ -74,16 +75,18 @@ const Hero = () => {
 
           {/* Hero Image */}
           <div className="relative">
-            <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-2xl p-8 shadow-elegant">
-              <div className="aspect-square bg-gradient-accent rounded-xl p-8 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-24 h-24 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Shield className="h-12 w-12 text-primary-foreground" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-accent-foreground mb-2">
-                    Trusted Partner
+            <div className="rounded-2xl overflow-hidden shadow-elegant">
+              <img 
+                src={heroImage} 
+                alt="Professional Alux cleaning team in action" 
+                className="w-full h-auto object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end">
+                <div className="p-8 text-center w-full">
+                  <h3 className="text-2xl font-bold text-primary-foreground mb-2">
+                    Professional Excellence
                   </h3>
-                  <p className="text-accent-foreground/80">
+                  <p className="text-primary-foreground/90">
                     Serving Harvey Norman, Domayne, and leading WA businesses
                   </p>
                 </div>

@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, Camera, TrendingUp, Users, FileText, Award } from "lucide-react";
+import beforeAfterImage from "@/assets/before-after-cleaning.jpg";
 
 const QualityAssurance = () => {
   return (
@@ -12,6 +13,25 @@ const QualityAssurance = () => {
           <p className="text-xl text-primary mb-4">
             We go beyond cleaning — we audit, improve, and train for excellence.
           </p>
+        </div>
+
+        {/* Before/After showcase */}
+        <div className="mb-12 relative rounded-2xl overflow-hidden shadow-elegant">
+          <img 
+            src={beforeAfterImage} 
+            alt="Before and after cleaning transformation" 
+            className="w-full h-80 object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-l from-primary/90 to-transparent flex items-center justify-end">
+            <div className="p-12 text-right">
+              <h3 className="text-3xl font-bold text-primary-foreground mb-4">
+                Visible Results Every Time
+              </h3>
+              <p className="text-primary-foreground/90 text-lg">
+                Our systematic approach delivers consistently excellent outcomes
+              </p>
+            </div>
+          </div>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">

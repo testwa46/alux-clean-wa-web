@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Target, Heart, Handshake } from "lucide-react";
+import cleaningTeamImage from "@/assets/cleaning-team.jpg";
 
 const About = () => {
   return (
@@ -33,12 +34,21 @@ const About = () => {
           </div>
 
           <div className="relative">
-            <div className="bg-gradient-primary rounded-2xl p-8 text-center shadow-elegant">
-              <div className="text-6xl font-bold text-primary-foreground mb-2">98%</div>
-              <div className="text-xl text-primary-foreground/90 mb-4">Customer Retention Rate</div>
-              <p className="text-primary-foreground/80">
-                We don't just aim to win your business — we aim to keep it.
-              </p>
+            <div className="rounded-2xl overflow-hidden shadow-elegant">
+              <img 
+                src={cleaningTeamImage} 
+                alt="Professional Alux cleaning team" 
+                className="w-full h-auto object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end">
+                <div className="p-6 text-center w-full">
+                  <div className="text-4xl font-bold text-primary-foreground mb-2">98%</div>
+                  <div className="text-lg text-primary-foreground/90 mb-2">Customer Retention Rate</div>
+                  <p className="text-primary-foreground/80 text-sm">
+                    We don't just aim to win your business — we aim to keep it.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
